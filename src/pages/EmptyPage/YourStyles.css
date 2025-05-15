@@ -1,0 +1,243 @@
+.duan-wei {
+  font-size: 25px;
+  color: #f3a500;
+}
+
+.profile-image {
+  position: absolute; /* 绝对定位图片 */
+  right: -20px; /* 将图片向右偏移，可以根据需求调整 */
+  top: 50%; /* 居中对齐 */
+  transform: translateY(-50%); /* 用于垂直居中 */
+}
+
+.list-card {
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.3s;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.list-card:hover {
+  border-color: lightblue;
+  transform: scale(1.05); /* 当鼠标悬停时放大卡片 */
+}
+
+.allShow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+}
+.allShow1 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid #ccc;
+  border-radius: 16px;
+}
+
+@media (min-width: 768px) {
+  .allShow {
+    flex-direction: row;
+  }
+  .allShow1 {
+    flex-direction: row;
+  }
+
+  .left-section {
+    flex: 1;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+  }
+
+  .right-section {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.standard-grade {
+  color: #b2b9be;
+  font-size: 16px;
+}
+
+.other-grade {
+  color: #fdd819;
+  font-size: 16px;
+}
+
+.detail-card {
+  width: 100%;
+  border-radius: 16px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.detail-content {
+  line-height: 1.5;
+}
+
+.advice-section,
+.intro-section {
+  margin-bottom: 16px;
+}
+
+.selected-image {
+  border-radius: 8px;
+  margin: 8px 8px 8px 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+}
+
+.images-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.chart-card {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 16px;
+  background: #fff;
+}
+
+.custom-card {
+  border-radius: 16px;
+  overflow: auto;
+  margin-top: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eaeaea;
+}
+
+.custom-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-card td {
+  padding: 12px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.custom-card ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.custom-card li {
+  margin-right: 16px;
+}
+
+.recharts-wrapper {
+  margin-left: -30px !important;
+}
+
+
+.product-section {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.product-recommend, .product-introduction, .product-description {
+  font-size: 16px;
+  color: #666;
+}
+
+.no-products {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+}
+
+.card-hover-effect {
+  border: 2px solid #ccc;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.3s;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+}
+
+.card-hover-effect:hover {
+  border-color: lightblue;
+  transform: scale(1.05); /* 当鼠标悬停时放大卡片 */
+}
+
+.chart-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.chart-description {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+
+
+/* For smaller screens */
+@media only screen and (max-width: 768px) {
+  .product-section {
+    padding: 10px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  .product-card {
+    margin-bottom: 15px;
+  }
+  .product-price {
+    font-size: 16px;
+  }
+  .product-recommend, .product-introduction, .product-description {
+    font-size: 14px;
+  }
+}
+
