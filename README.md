@@ -49,6 +49,13 @@ to deliver **scientific, personalized, privacy-preserving wellness plans**.
 
 ---
 
+## Contract
+
+Hair Reward Contract : 
+Reward contract for Genpulse. This contract allows users to earn rewards in the form of $HAIR points for engaging with the Genpulse ecosystem. All the rewards are distributed and tracked on-chain, ensuring transparency and security.
+
+Deployed on Solana Devnet - Link [here](https://explorer.solana.com/tx/5hHbrMS7iFFZnXagLP7FhtZn3d52PexgENn1ibFwyEwoAPM2jhJR4t5jtpgRDHBNRkXJFPUTaNMcqpZVeTtZ2EPo?cluster=devnet)
+
 ## 🌟 Innovation & Uniqueness
 
 - 🧬 **First decentralized wellness protocol** with vertical AI agents + diagnostics.
