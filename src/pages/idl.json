@@ -1,0 +1,95 @@
+{
+  "version": "0.1.0",
+  "name": "genpulse",
+  "instructions": [
+    {
+      "name": "initializeUser",
+      "accounts": [
+        { "name": "rewardAccount", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": true },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": []
+    },
+    {
+      "name": "rewardAction",
+      "accounts": [
+        { "name": "rewardAccount", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": false, "isSigner": true }
+      ],
+      "args": [
+        { "name": "category", "type": { "defined": "Category" } },
+        { "name": "currentDay", "type": "u64" }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "RewardAccount",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "user", "type": "publicKey" },
+          { "name": "points", "type": "u64" },
+          { "name": "joinedCommunity", "type": "bool" },
+          { "name": "browseComplete", "type": "bool" },
+          { "name": "isFirstLogin", "type": "bool" },
+          { "name": "usedMicroscope", "type": "bool" },
+          { "name": "sevenDayStreak", "type": "u8" },
+          { "name": "lastLoginDay", "type": "u64" },
+          { "name": "lastCameraDay", "type": "u64" },
+          { "name": "lastMicroscopeDay", "type": "u64" },
+          { "name": "weeklyMicroscopeCount", "type": "u8" }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "Category",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          { "name": "FirstMicroscopeUse" },
+          { "name": "RoutineMicroscope" },
+          { "name": "ThreeMicroscopeWeekly" },
+          { "name": "CameraDetection" },
+          { "name": "DailyHairCare" },
+          { "name": "SevenDayHairCare" },
+          { "name": "JoinCommunity" },
+          { "name": "SocialShare" },
+          { "name": "Login" },
+          { "name": "InviteFriend" },
+          { "name": "FriendPurchase" }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "DailyLimitExceeded",
+      "msg": "Daily limit exceeded for this activity."
+    },
+    {
+      "code": 6001,
+      "name": "AlreadyJoined",
+      "msg": "User has already joined community."
+    },
+    {
+      "code": 6002,
+      "name": "BrowseRequirement",
+      "msg": "Social share requires +100 browse prerequisite."
+    },
+    {
+      "code": 6003,
+      "name": "AlreadyUsed",
+      "msg": "This first-time reward has already been claimed."
+    },
+    {
+      "code": 6004,
+      "name": "WeeklyTargetNotMet",
+      "msg": "Weekly reward condition not met."
+    }
+  ]
+}
